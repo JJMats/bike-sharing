@@ -1,0 +1,29 @@
+﻿Run,iterations,learning_rate,hidden_nodes,output_nodes,Training Loss,Validation Loss,Notes
+1,100,0.1,2,1,0.91,1.31,First run
+2,100,0.1,5,1,0.76,1.28,"Increased hidden nodes, helps slightly"
+3,100,0.1,10,1,0.693,1.248,"Increased hidden nodes, helps slightly"
+4,200,0.1,10,1,0.598,0.971,"Increased iterations, seems to help"
+5,300,0.1,10,1,0.585,1.002,"Increased iterations further, doesn't help much"
+6,300,1,10,1,0.269,0.47,"Increased learning rate, helps a lot"
+7,100,1,10,1,0.565,0.826,"Decreased iterations, hurts the model because the validation loss starts to increase ~80 iterations"
+8,80,1,10,1,0.398,0.677,"Decreased iterations further, helps slightly"
+9,150,0.5,10,1,0.347,0.57,"Increased iterations and decreased learning rate, helps"
+10,300,0.5,10,1,0.304,0.475,"Increased iterations, seems to help"
+11,300,0.5,15,1,0.431,0.596,"Increased hidden nodes, which hurt"
+12,300,0.5,20,1,0.303,0.467,"Increased hidden nodes further, seems to help"
+13,300,0.5,30,1,0.458,0.777,"Increased hidden nodes, probably not enough iterations at the specified learning rate"
+14,500,0.5,30,1,0.333,0.547,"Increased iterations, seems to help"
+15,500,0.75,30,1,0.892,1.385,"Learning rate too high, could not converge?"
+16,500,0.25,30,1,0.396,0.587,Lots of bouncing. Learning rate too low?
+17,500,0.33,30,1,0.293,0.469,"Less bouncing, better convergence"
+18,500,0.4,30,1,0.273,0.473,"Smooth curves, good convergence"
+19,500,0.6,30,1,0.956,1.307,"Rapid convergence, then flat lines. Learning rate too high"
+20,500,0.45,30,1,0.266,0.453,Good convergence
+21,700,0.45,30,1,0.258,0.426,"Better with more iterations, but diminishing returns"
+22,1000,0.45,30,1,0.238,0.399,"Increased iterations, seems to help"
+23,2500,0.45,30,1,0.084,0.183,Slight increase in validation loss at ~2300
+24,5000,0.45,30,1,0.062,0.143,Validation loss is still decreasing
+25,10000,0.45,30,1,0.056,0.14,Diminishing returns. Curve flatlines at ~4500 iterations
+26,10000,0.45,50,1,0.139,0.27,Increasing the hidden nodes doesn't help much
+27,10000,0.33,50,1,0.084,0.172,"Major kick down at ~6000 iterations, validation loss stops decreasing at ~8000 iterations"
+28,4500,0.45,30,1,0.067,0.146,Seems to generalize well
